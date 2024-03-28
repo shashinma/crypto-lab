@@ -12,9 +12,9 @@ set(EXECUTABLE_NAME ransomware)
 find_package(cryptopp CONFIG REQUIRED)
 find_package(cxxopts CONFIG REQUIRED)
 
-add_library(${LIBRARY_FILEPROC} FileProcessor.cpp FileProcessor.h)
-add_library(${LIBRARY_OPTPARS} OptionParser.cpp OptionsParser.h)
-add_library(${LIBRARY_TEMPFILE} TempFile.cpp TempFile.h)
+add_library(${LIBRARY_FILEPROC} FileProcessor/FileProcessor.cpp FileProcessor/FileProcessor.h)
+add_library(${LIBRARY_OPTPARS} OptionParser/OptionParser.cpp OptionParser/OptionsParser.h)
+add_library(${LIBRARY_TEMPFILE} FileProcessor/TempFile/TempFile.cpp FileProcessor/TempFile/TempFile.h)
 
 target_link_libraries(${LIBRARY_FILEPROC} PRIVATE cryptopp::cryptopp)
 target_link_libraries(${LIBRARY_FILEPROC} INTERFACE cxxopts::cxxopts)

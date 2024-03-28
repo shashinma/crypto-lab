@@ -3,7 +3,7 @@
 //
 
 #include "FileProcessor.h"
-#include "TempFile.h"
+#include "TempFile/TempFile.h"
 
 FileProcessor::FileProcessor(const std::vector<uint8_t>& customKey) {
     key = CryptoPP::SecByteBlock(customKey.data(), customKey.size());   // Инициализация ключа

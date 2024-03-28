@@ -1,6 +1,6 @@
 // Включение необходимых заголовочных файлов
-#include "FileProcessor.h"
-#include "OptionsParser.h"
+#include "FileProcessor/FileProcessor.h"
+#include "OptionParser/OptionsParser.h"
 #include <future>
 
 // Определение константы для целевой папки
